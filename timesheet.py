@@ -1,32 +1,41 @@
 # Number -> TextFile
-# Produce average pay rate, 
-# Compare to past average(s), desired average, and local average
-# Write to TextFile with formatting
-# Given monthly pay and input list of hours
-#a_list = [1,2,3]
-#b_list = []
-#for i in range(3):
-#    inp = int(input())    # Initial TypeError: str used as int
- #   b_list.append(inp)
+# Produce hourly pay rate and compare
+# Given monthly pay and inputs for hours and comparative pay
 
 
-#template
-#def average(given_list):
-#    avg = ( (sum(given_list)) / (len(given_list)) )
-#    return int(avg)
+# Input hours
+list_hrs = []
+tot_hrs = 0
+
+for i in range(1,4):
+    print("Day",i)
+    inp = int(input())   
+    list_hrs.append(inp)
+    tot_hrs = sum(list_hrs)
+
+
+# Variables for pay rates
+print("\nEnter period pay:")
+pay = int(input())
+hrs = tot_hrs
 
 # Average pay rate
-print("Enter pay:")
-pay = int(input())
-
-print("Enter hours:")
-hrs = int(input())
-
 def payrate(p,h):
     avg = (pay / hrs)
     return int(avg)
 
 
-print(f"Your average pay rate is:", payrate(pay,hrs))
+# Compare to other rates
+current_rate = payrate(pay,hrs)
 
+def compare(other_rate):
+    if current_rate < other_rate: 
+        print("You are underpaid.")
+    else:
+        print("You earn above the average pay rate.")
 
+# Print Calculations and Relations
+print(f"\nTotal hours worked:", hrs)
+print(f"Hourly pay rate:", payrate(pay,hrs))
+print("\nEnter rate to compare:")
+comp = compare(int(input()))
