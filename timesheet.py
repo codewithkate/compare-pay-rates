@@ -34,6 +34,7 @@ def compare(other_rate):
     else:
         print("You earn above the average pay rate.")
 
+        
 # Print Calculations and Relations
 print(f"\nTotal hours worked:", hrs)
 print(f"Hourly pay rate:", payrate(pay,hrs))
