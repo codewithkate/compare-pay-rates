@@ -1,4 +1,3 @@
-# Number -> TextFile
 # Produce hourly pay rate and compare
 # Given monthly pay and inputs for hours and comparative pay
 
