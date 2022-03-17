@@ -1,13 +1,14 @@
-# Number -> TextFile
 # Produce hourly pay rate and compare
-# Given monthly pay and inputs for hours and comparative pay
+# Input list total days and hours worked, monthly pay, and an hourly pay to compare
 
 
 # Input hours
+print("How many days did you work this period?")
+days = int(input())
 list_hrs = []
 tot_hrs = 0
 
-for i in range(1,4):
+for i in range(days):
     print("Day",i)
     inp = int(input())   
     list_hrs.append(inp)
@@ -34,8 +35,11 @@ def compare(other_rate):
     else:
         print("You earn above the average pay rate.")
 
-# Print Calculations and Relations
+        
+# Print Calculations
 print(f"\nTotal hours worked:", hrs)
 print(f"Hourly pay rate:", payrate(pay,hrs))
+
+# Print Comparisons
 print("\nEnter rate to compare:")
 comp = compare(int(input()))
