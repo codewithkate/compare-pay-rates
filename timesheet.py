@@ -1,12 +1,13 @@
 # Produce hourly pay rate and compare
-# Given monthly pay and inputs for hours and comparative pay
+# Input list total days and hours worked, monthly pay, and an hourly pay to compare
 
 
 # Input hours
+days = input("How many days did you work this period?" (int())
 list_hrs = []
 tot_hrs = 0
 
-for i in range(1,4):
+for i in range(1,days):
     print("Day",i)
     inp = int(input())   
     list_hrs.append(inp)
