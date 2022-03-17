@@ -2,23 +2,11 @@
 # Input list total days and hours worked, monthly pay, and an hourly pay to compare
 
 
-# Input hours
-print("How many days did you work this period?")
-days = int(input())
-list_hrs = []
-tot_hrs = 0
-
-for i in range(days):
-    print("Day",i)
-    inp = int(input())   
-    list_hrs.append(inp)
-    tot_hrs = sum(list_hrs)
-
-
 # Variables for pay rates
-print("\nEnter period pay:")
+print("\nEnter total pay:")
 pay = int(input())
-hrs = tot_hrs
+print("Enter total hours:")
+hrs = int(input())
 
 # Average pay rate
 def payrate(p,h):
